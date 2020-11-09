@@ -1,7 +1,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /* 👀 This is your data ⬇ */
-const originalFlavors = [
+export const originalFlavors = [
     "Banana Nut Fudge",
     "Black Walnut",
     "Burgundy Cherry",
@@ -91,8 +91,9 @@ Use the addFlavor function below to do the following:
 function addFlavor(array1) {
 
     let jibJab = array1.unshift("ChocolateFudgeChunk")
-    return array1
+    return array1;
 }
+
 // console.log(addFlavor(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -152,12 +153,12 @@ function removeFlavorByName(array, string) {
         }
         return array;
     }
-
-    removeFlavorByName(originalFlavors, "Coffee")
-    console.log(originalFlavors)
-
-
 }
+removeFlavorByName(originalFlavors, "Coffee")
+    // console.log(originalFlavors)
+
+
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
@@ -169,7 +170,6 @@ Use the filterByWord function below to do the following:
     2. Check to see if any of the flavors in the array contain that string
     4. If they do, add them to a new array
     5. Return the new array that contains the filtered flavors
-
     For example: filterByWord(originalFlavors, "Chocolate") should return ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
 
     HINT - you can use the .includes method to help you solve this
@@ -181,14 +181,15 @@ function filterByWord(array, string) {
 
     let newArray = [];
     for (let index = 0; index < array.length; index++) {
-        if (array[i].includes(string)) {
-            newArray.push(array[i])
+        if (array[index].includes(string)) {
+            newArray.push(array[index])
         }
         return newArray;
 
     }
+    filterbyKeyword(originalFlavors, "Chocolate")
 
-    console.log(filterByWord(originalFlavors, "Chocolate"))
+
 
 
 }
@@ -208,9 +209,9 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-// function getAverageWordLength( /*code here*/ ) {
-/*code here*/
-// }
+function getAverageWordLength( /*code here*/ ) {
+    /*code here*/
+}
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -226,9 +227,9 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-// function getRandomFlavors( /*code here*/ ) {
-/*code here*/
-// }
+function getRandomFlavors( /*code here*/ ) {
+    /*code here*/
+}
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
@@ -314,18 +315,19 @@ const regionalFlavors = [
 
 
 //  🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-// function foo() {
-//     return 'bar';
-// }
+function foo() {
+    return 'bar';
+}
 
-// export default {
-//     foo,
-//     is31Flavors,
-//     addFlavor,
-//     removeLastFlavor,
-//     getFlavorByIndex,
-//     removeFlavorByName,
-//     copy,
-//     filterByWord,
-//     getAverageWordLength,
-//       getRandomFlavors
+export default {
+    foo,
+    is31Flavors,
+    addFlavor,
+    removeLastFlavor,
+    getFlavorByIndex,
+    removeFlavorByName,
+    copy,
+    filterByWord,
+    getAverageWordLength,
+    getRandomFlavors
+}
